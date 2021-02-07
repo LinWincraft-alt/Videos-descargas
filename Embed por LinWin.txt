@@ -1,0 +1,21 @@
+client.on('message', message => {
+    if(message.content.startsWith('-embed')) {
+        const embed = new MessageEmbed()
+
+        .setTitle('Embed de Prueba')
+
+        .setDescription('Descripción de prueba')
+
+        .setColor("RED")
+
+        .setThumbnail('https://media.giphy.com/media/l0HlLrIzwGy9k3Kbm/giphy.gif')
+
+        .setImage('https://cdn.discordapp.com/avatars/555075710037786645/72a951930eb2add54ea6c8f4b3d6c18a.png?size=128')
+
+        .setAuthor('LinWin')
+
+        .setTimestamp()
+
+        message.channel.send(embed)
+    }
+});
